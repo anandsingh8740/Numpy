@@ -21,9 +21,8 @@ start = time.time()   # measure the current time
 c = a + b
 print(time.time() - start) # 0.15776371955871582
 
-# Imp :- Numpy is more faster then python list.
-# Numpy use c type array -> it is a static array and it is a referential array
-
+# Important: NumPy is faster than Python lists.
+# NumPy uses C-type arrays — they are static and stored in contiguous memory (not referential like Python lists).
 # Memory
 a = [i for i in range(10000000)]
 import sys
@@ -32,8 +31,8 @@ print(sys.getsizeof(a)) # 89095160
 a = np.arange(10000000)
 print(sys.getsizeof(a)) # 80000112
 
-a = np.arange(10000000, dtype=np.int32) # using int32 bit the storage will be half
+a = np.arange(10000000, dtype=np.int32) # Using int32, the storage will be reduced by half.
 print(sys.getsizeof(a)) # 40000112
 
-a = np.arange(10000000, dtype=np.int16) # using int32 bit the storage will be half
+a = np.arange(10000000, dtype=np.int16) # Using int32, the storage will be reduced by half.
 print(sys.getsizeof(a)) # 20000112

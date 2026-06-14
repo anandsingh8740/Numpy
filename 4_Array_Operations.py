@@ -18,8 +18,9 @@ print(a2)
  [20 21 22 23]]
 '''
 print("Scalar operations ->")
-# Scalar operations -> single value is applied to all elements of the array
-# arithmetic operations
+# Scalar operations: A single value is applied to all elements of the array.
+# Arithmetic operations
+
 print(a1*2)   # (a1-> matrix, 2-> scalar)
 '''
 [[ 0  2  4  6]
@@ -28,7 +29,7 @@ print(a1*2)   # (a1-> matrix, 2-> scalar)
 '''
 
 print("Relational operations ->")
-print(a1 > 5)   # (a1-> matrix, 5-> scalar) # or a2== 15 like that comparison can be done
+print(a1 > 5)   # (a1 -> matrix, 5 -> scalar) -> Comparisons can also be performed like a2 == 15.
 
 '''
 [[False False False False]
@@ -36,11 +37,13 @@ print(a1 > 5)   # (a1-> matrix, 5-> scalar) # or a2== 15 like that comparison ca
  [ True  True  True  True]]
 '''
 print("Vectorized operations ->")
-# Vectorized operations -> jab do numpy arrays ke uper ham operations perform karte hai to wo element wise perform hota hai, isko vectorized operations kehte hai
+# Vectorized operations: When operations are performed on two NumPy arrays,
+# they are executed element-wise. This is called vectorized operations.
 # Arithmetic operations
-print(a1 + a2)   # (a1-> matrix, a2-> matrix) # dono matrix ke corresponding elements ka sum nikalta hai
+print(a1 + a2)   # (a1 -> matrix, a2 -> matrix) -> It adds the corresponding elements of both matrices.
 
-# we can do all the operators like addition, subtraction, multiplication, division, etc. with two arrays of the same shape 
+# We can perform all operations like addition, subtraction,
+# multiplication, division, etc. on two arrays of the same shape.
 '''
 [[12 14 16 18]
  [20 22 24 26]

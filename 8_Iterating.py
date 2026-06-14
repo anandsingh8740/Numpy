@@ -76,7 +76,7 @@ for i in np.nditer(a3):
 
 # reshape
 
-# Transpose -> change row to column
+# Transpose -> converts rows into columns.
 print("Transpose")
 print(a2)
 
@@ -94,7 +94,7 @@ print(np.transpose(a2))
  [ 3  7 11]]
 '''
 
-# another syntax of Transpose -> Give same output
+# Another syntax for transpose -> gives the same output.
 print(a2.T)
 '''
 [[ 0  4  8]
@@ -103,7 +103,7 @@ print(a2.T)
  [ 3  7 11]]
 '''
 
-# reval -> convert all dimension array into 1 D array
+# ravel -> converts any dimensional array into a 1D array.
 print("reval")
 
 print(a2)

@@ -6,7 +6,7 @@ a1 = np.arange(10)
 a2 = np.arange(12).reshape(3, 4)
 a3 = np.arange(8).reshape(2, 2, 2)
 
-# slicing -> we can slice the array using the colon operator (:)
+# Slicing -> We can slice the array using the colon operator (:).
 print("slicing ->")
 
 print(a1)  # [0 1 2 3 4 5 6 7 8 9]
@@ -22,13 +22,12 @@ print(a2)
  [ 8  9 10 11]]
 '''
 
-# I want first row of a2
+# I want the first row of a2.
 print(a2[0])  # [0 1 2 3]
 print(a2[0, :])  # [0 1 2 3] -> first row, all columns
 
-# I want 3rd column of a2
-# agar hame 3rd column chahiye to row koin sa chahiye-> hame sare rows chahiye
-
+# I want the 3rd column of a2.
+# To get the 3rd column, we need all the rows.
 print(a2[:, 2]) # [ 2  6 10]  # [all row(:), col(2)]
 
 '''
@@ -37,7 +36,7 @@ I want
 9, 10
 '''
 
-print(a2[1:, 1:3])   # a2[1 ke onward:, 1 onwards :3(not include)]
+print(a2[1:, 1:3])   # a2[1 onwards :, 1 onwards :3 (3 not included)]
 '''
 [[ 5  6]
  [ 9 10]]
@@ -48,14 +47,20 @@ print(a2[1:, 1:3])   # a2[1 ke onward:, 1 onwards :3(not include)]
  [ 4  5  6  7]
  [ 8->  9 10 11->]]
 '''
-print(a2[::2,::3])  # (a2[(total row chahiye(0,8) :, charo column chahiye :, rows alternate chaiye 2(sare rows ayege alternat wal) column 2 ,2 ka jump lega, :])
+ 
+# a2[(all rows required (0,8) :, all columns required :,
+# rows should be alternate with a step of 2,
+# columns will also take a jump of 2 :)]
+print(a2[::2,::3]) 
 
 '''
 [[ 0  3]
  [ 8 11]]
 '''
-# Imp:- practice on this topics
-# find out 1, 3, 9, 11  # : -> all the row : : 2 -> means we want alternate row
+# Important: Practice these topics.
+# Find 1, 3, 9, and 11.
+# : -> selects all rows
+# ::2 -> selects alternate rows
 print(a2[: : 2, 1::2 ])  # a2[(: : 2)->row, (1::2) -> column ]
 
 '''
@@ -63,7 +68,7 @@ print(a2[: : 2, 1::2 ])  # a2[(: : 2)->row, (1::2) -> column ]
  [ 9 11]]
 '''
 
-# I want 4, 7
+# I want 4 and 7.
 print(a2[1,::3]) # [4 7]
 # I want 1 2 3 5 6 7
 print(a2[0:2])
@@ -111,7 +116,7 @@ print(a3)
   [24 25 26]]]
 '''
 
-# This numpy array consist of 3, 2D arrays
+# This NumPy array consists of 3 2D arrays.
 print(a3[1])
 
 '''
@@ -120,8 +125,7 @@ print(a3[1])
  [15 16 17]]
 '''
 
-print(a3[::2])  # [sabko nikal lo , aur phir alternate wale ko nikal lo]
-
+print(a3[::2])  # [Select all elements, then select the alternate ones]
 '''
 [[[ 0  1  2]
   [ 3  4  5]
@@ -132,15 +136,16 @@ print(a3[::2])  # [sabko nikal lo , aur phir alternate wale ko nikal lo]
   [24 25 26]]]
 '''
 
-# 1st 2d array ka hai uska 2nd row print kara kar do -> [3, 4, 5]
-print(a3[0, 1, :])  # [1st 2D array, 2nd row, all the columns]  # [3 4 5]
+# Print the 2nd row of the 1st 2D array -> [3, 4, 5]
+print(a3[0, 1, :])  # [1st 2D array, 2nd row, all columns]  # [3 4 5]
 
-
-# 2nd wale numpy ka bich wala column chahiye
+# I want the middle column of the 2nd NumPy array.
 print(a3[1,:,1]) # [10 13 16] 
 
 # 22,23,25,26
-print(a3[2,1:,1:])  # (a3[2nd D, 1->row:(onwards)->sabkuch chaiye age ka, 1st column onward : ->sabkuch]) -- 1:-> means 1 se agae sabkuch
+print(a3[2,1:,1:])  # (a3[2nd 2D array, 1st row onwards -> select everything after 1,
+# 1st column onwards -> select everything])
+# 1: -> means select everything from index 1 onwards.
 
 '''
 [[22 23]
@@ -148,8 +153,7 @@ print(a3[2,1:,1:])  # (a3[2nd D, 1->row:(onwards)->sabkuch chaiye age ka, 1st co
 '''
 
 # I want 0 2    18 20
-print(a3[::2,0, ::2])   # a3[::2 -> we can find out alternate array]
-
+print(a3[::2,0, ::2])   # a3[::2] -> used to select alternate arrays.
 '''
 [[ 0  2]
     [18 20]]

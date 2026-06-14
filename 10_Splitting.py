@@ -11,7 +11,7 @@ print(a4)
  [ 8  9 10 11]]
 '''
 
-print(np.hsplit(a4, 2))  # I want to divide a4 into 2 parts
+print(np.hsplit(a4, 2))  # I want to divide a4 into 2 parts.
 '''
 [array([[0, 1],
        [4, 5],
@@ -20,7 +20,7 @@ print(np.hsplit(a4, 2))  # I want to divide a4 into 2 parts
        [10, 11]])]
 '''
 
-print(np.hsplit(a4, 4))  # I want to divide a4 into 4 parts
+print(np.hsplit(a4, 4))  # I want to divide a4 into 4 parts.
 '''
 [array([[0],
        [4],
@@ -33,8 +33,7 @@ print(np.hsplit(a4, 4))  # I want to divide a4 into 4 parts
        [11]])]
 '''
 
-# print(np.hsplit(a4, 5))  # give error  -> ValueError : array split does not result in an equal division
-
+# print(np.hsplit(a4, 5))  # gives error -> ValueError: array split does not result in an equal division
 
 # vertical splitting
 print("# vertical splitting")

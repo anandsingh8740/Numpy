@@ -124,7 +124,8 @@ print(np.random.random((3, 2))*100)
  [81.62817704 36.32100676]
  [56.82368473 89.58743267]]
 '''
-# floor -> round off to lower value, ceil -> round off to higher value
+# floor -> rounds down to the nearest lower value
+# ceil -> rounds up to the nearest higher value
 print(np.round(np.random.random((2, 3))*100))
 '''
 [[88. 31. 30.]
@@ -136,7 +137,12 @@ print(np.floor(np.random.random((2, 3))*100))
 [[29. 44. 28.]
  [31. 92.  8.]]
 '''
-# Ceil -> round off to higher value # 6.1 then ceil(6.1) = 7, ceil(-6.1) = -6, ceil(6.9) = 7, ceil(-6.9) = -6
+# Ceil -> rounds up to the nearest higher value
+# Example:
+# ceil(6.1) = 7
+# ceil(-6.1) = -6
+# ceil(6.9) = 7
+# ceil(-6.9) = -6
 print(np.ceil(np.random.random((2, 3))*100))
 '''
 [[ 3. 51. 99.]
